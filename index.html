@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Patient</title>
+<meta name="description" content="Virtual Patient: a voice-based standardized-patient simulator for the BYU School of Medicine. An introduction, with guides for faculty and for the development team.">
+<style>
+  :root {
+    --navy: #002e5d; --ink: #1c2430; --muted: #5a6573; --ground: #f5f7f6; --card: #ffffff;
+    --sage: #dfe8e3; --line: #d9dee3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink);
+         font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  header { background: var(--navy); color: #fff; padding: 3rem 1rem 2.6rem; }
+  header .wrap, main { max-width: 980px; margin: 0 auto; }
+  header .wrap { padding: 0 1rem; }
+  h1, h2, h3 { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; font-weight: 600; line-height: 1.2; }
+  h1 { margin: 0 0 .6rem; font-size: 2.4rem; }
+  header p { margin: .3rem 0; color: #dbe4ee; max-width: 44rem; font-size: 1.1rem; }
+  main { padding: 2rem 1rem 3rem; }
+  h2 { font-size: 1.5rem; margin: 2.4rem 0 .8rem; }
+  a { color: var(--navy); }
+  .intro { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 2rem; align-items: center; }
+  .intro p { margin: 0 0 .8rem; }
+  .intro figure { margin: 0; }
+  .intro img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px;
+               box-shadow: 0 1px 3px rgba(0, 0, 0, .06); }
+  .intro figcaption { color: var(--muted); font-size: .88rem; margin-top: .4rem; }
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem;
+          text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(0, 0, 0, .05); }
+  .card:hover, .card:focus-visible { border-color: var(--navy); box-shadow: inset 0 0 0 1px var(--navy); }
+  .card h3 { margin: 0 0 .4rem; font-size: 1.25rem; color: var(--navy); }
+  .card p { margin: 0; color: var(--ink); }
+  .card .for { display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .02em; color: var(--muted);
+               text-transform: uppercase; margin-bottom: .35rem; }
+  ul.points { padding-left: 1.2rem; max-width: 46rem; }
+  ul.points li { margin: .35rem 0; }
+  .status { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.3rem; }
+  .status p { margin: .3rem 0; }
+  footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1rem; }
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.9rem; }
+    .intro, .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Virtual Patient</h1>
+    <p>A standardized-patient simulator for the BYU School of Medicine. Students interview an AI patient out loud, examine and test, present their thinking, and get feedback tied to what they actually said.</p>
+  </div>
+</header>
+<main>
+
+<div class="intro">
+  <div>
+    <p>Practicing with standardized patients is one of the best ways to learn a clinical interview, and one of the hardest to schedule. Virtual Patient gives students a patient they can see any time: they talk to her, she answers in her own voice with her face moving as she speaks, and she reveals what she knows only when asked well, sometimes only after the student builds rapport.</p>
+    <p>After the encounter, students give a summary, differential and plan, and the app scores the history, communication and reasoning, with every point linked to the moment in the transcript where it happened. Faculty write the cases, assign them, and review, adjust and release the scores.</p>
+  </div>
+  <figure>
+    <img src="images/talking.jpg" alt="The exam room: the patient Linda Hale on video, mid-answer, with the live transcript beside her." loading="lazy">
+    <figcaption>The exam room, mid-interview. Patients and faces are synthetic.</figcaption>
+  </figure>
+</div>
+
+<p><a class="card" href="faculty-guide.html" style="max-width:30rem">
+  <span class="for">For faculty</span>
+  <h3>Faculty guide</h3>
+  <span>What a student encounter looks like, step by step with screenshots; what faculty can do; a ten-minute demo; and what's known to be missing.</span>
+</a></p>
+
+<h2>What's in it</h2>
+<ul class="points">
+  <li><strong>Voice interviews</strong> with patients who sigh, worry and react to how the student talks: rushed questions and interruptions make them guarded.</li>
+  <li><strong>Patients you can see:</strong> photoreal synthetic faces lip-synced on BYU's own GPUs, or animated 3D patients.</li>
+  <li><strong>Exam and orders</strong> from one fixed menu, with the case's findings, lab values and images.</li>
+  <li><strong>Evidence-linked feedback</strong> on history, communication (Calgary-Cambridge) and clinical reasoning, which faculty can review and override.</li>
+  <li><strong>Case authoring</strong> with AI drafting, and dials for each patient's talkativeness, openness, assertiveness, emotion and patience.</li>
+</ul>
+
+<h2>Where it stands</h2>
+<div class="status">
+  <p><strong>Version 0.2.0</strong> (October 2026), a pilot on BYU's servers, reachable on the CS VPN or campus network.</p>
+  <p>Next: getting ready for a first student cohort (network access, clinical review of the cases, phone support), then instructor live observation, presentations to an attending, and test mode. The sample cases and faces are drafts awaiting School of Medicine review.</p>
+</div>
+
+<footer>
+  Virtual Patient is a BYU Computer Science project with the BYU School of Medicine, led by Quinn Snell. No real patient data is used anywhere: every case and face is invented.
+</footer>
+</main>
+</body>
+</html>

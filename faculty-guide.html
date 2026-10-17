@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Patient: faculty guide</title>
+<meta name="description" content="A one-page guide to the BYU School of Medicine Virtual Patient pilot: what a student encounter looks like, and what faculty can do.">
+<style>
+  :root {
+    --navy: #002e5d;
+    --ink: #1c2430;
+    --muted: #5a6573;
+    --ground: #f5f7f6;
+    --card: #ffffff;
+    --sage: #dfe8e3;
+    --line: #d9dee3;
+    --amber-bg: #fbefe1;
+    --amber: #a85a00;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header { background: var(--navy); color: #fff; padding: 2.2rem 1rem 2rem; }
+  header .wrap, main { max-width: 980px; margin: 0 auto; }
+  header .wrap { padding: 0 1rem; }
+  h1, h2, h3 { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; font-weight: 600; line-height: 1.2; }
+  h1 { margin: 0 0 .4rem; font-size: 2.1rem; }
+  header p { margin: .2rem 0; color: #dbe4ee; max-width: 46rem; }
+  main { padding: 1.5rem 1rem 3rem; }
+  h2 { font-size: 1.55rem; margin: 2.6rem 0 .8rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 1.2rem; margin: 0 0 .35rem; }
+  a { color: var(--navy); }
+  .start { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.3rem; }
+  .start ul { margin: .3rem 0 0; padding-left: 1.2rem; }
+  .start li { margin: .25rem 0; }
+  .url { font-weight: 600; word-break: break-all; }
+  .step { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 1.4rem; align-items: start; margin: 1.8rem 0; }
+  .step .num { display: inline-block; min-width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--navy); color: #fff;
+               text-align: center; font: 600 .95rem/1.8rem system-ui, sans-serif; margin-right: .45rem; }
+  .step p { margin: .35rem 0; color: var(--ink); }
+  .step .tip { color: var(--muted); font-size: .95rem; }
+  figure { margin: 0; }
+  figure a { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--card);
+             box-shadow: 0 1px 3px rgba(0, 0, 0, .06); }
+  figure img { display: block; width: 100%; height: auto; }
+  figure.narrow { max-width: 340px; }
+  .note { background: var(--amber-bg); border-radius: 10px; padding: .9rem 1.1rem; margin: 1rem 0; }
+  .note strong { color: var(--amber); }
+  .demo ol { padding-left: 1.3rem; }
+  .demo li { margin: .35rem 0; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  .cols ul { margin: .3rem 0; padding-left: 1.2rem; }
+  footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1rem; }
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.7rem; }
+    .step, .cols { grid-template-columns: 1fr; }
+    figure.narrow { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Virtual Patient: faculty guide</h1>
+    <p>A voice-based standardized-patient simulator for the BYU School of Medicine. Students interview an AI patient out loud, examine them and order tests, present a summary and differential, and get feedback tied to what they actually said. Faculty write the cases, assign them, and review and adjust the scores.</p>
+    <p>Pilot version 0.1.1, October 2026.</p>
+  </div>
+</header>
+<main>
+
+<div class="start">
+  <h3>Before you start</h3>
+  <ul>
+    <li>Open <a class="url" href="https://virtual-patient.ml-capstone.cs.byu.edu">virtual-patient.ml-capstone.cs.byu.edu</a> in Chrome or Edge on a laptop. Ask Quinn Snell for an account.</li>
+    <li>Connect to the BYU CS VPN or the campus network first; the site isn't reachable from elsewhere yet.</li>
+    <li>Use a headset if you can. Talking works with the laptop's microphone too: hold the space bar while you speak.</li>
+    <li>The cases are draft clinical content awaiting School of Medicine review, and the video faces are generated: no real person, and also awaiting review.</li>
+  </ul>
+</div>
+
+<h2>A student encounter</h2>
+
+<div class="step">
+  <div>
+    <h3><span class="num">1</span>Pick a patient</h3>
+    <p>The clinic lists any patients a course has assigned, and a practice clinic that's open anytime and not graded.</p>
+  </div>
+  <figure><a href="images/clinic.jpg"><img src="images/clinic.jpg" alt="The student clinic page: a schedule, and a practice clinic listing Daniel Reyes, 58, chest discomfort, and Linda Hale, 46, stomach pain, each with a See patient button." loading="lazy"></a></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">2</span>Read the door chart</h3>
+    <p>Reason for visit, setting, triage vitals and the time allowed, as on a real clinic door. Students can test their microphone, then enter the room; the clock starts then.</p>
+  </div>
+  <figure><a href="images/door.jpg"><img src="images/door.jpg" alt="Linda Hale's door chart: 46-year-old female, stomach pain, internal medicine clinic, triage vitals, 15 minutes, with an Enter the room button." loading="lazy"></a></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">3</span>Interview the patient</h3>
+    <p>Students speak (hold the space bar, or hands-free with a headset) or type. The patient answers in her own voice about two seconds later, and her face moves with her words.</p>
+    <p>She shares what the case allows, when it's asked well. Some details come only if the student builds rapport. She also reacts to how the student talks: rushed questions and interruptions make her shorter and more guarded.</p>
+    <p class="tip">Faculty choose each case's patient: a photoreal video face, an animated 3D one, or a portrait.</p>
+  </div>
+  <figure><a href="images/talking.jpg"><img src="images/talking.jpg" alt="The exam room: Linda Hale's video face mid-sentence, labelled Linda is speaking, her answer in large type below it, a Hold to talk button, and the live transcript of the interview on the right." loading="lazy"></a></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">4</span>Examine and order tests</h3>
+    <p>The same menu of exams, labs and imaging appears for every case, so it never hints at the diagnosis. Results appear in the transcript; ordering imaging can show the case's image.</p>
+  </div>
+  <figure><a href="images/orders.jpg"><img src="images/orders.jpg" alt="The Exam and orders tab: vitals, physical exam by system, labs such as CBC and metabolic panel, ECG, and imaging from X-rays to CT and MRI." loading="lazy"></a></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">5</span>Present the patient</h3>
+    <p>After ending the encounter, students give a one-line summary, a ranked differential and a plan, as they would to an attending.</p>
+  </div>
+  <figure><a href="images/wrap-up.jpg"><img src="images/wrap-up.jpg" alt="The wrap-up form with a one-line summary, a differential of peptic ulcer disease, gastritis, GERD, biliary colic and pancreatitis, and a plan." loading="lazy"></a></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">6</span>Read the feedback</h3>
+    <p>A score for history and exam, communication (based on the Calgary-Cambridge guide) and clinical reasoning. Critical items that were missed are flagged, and the student gets three concrete things to work on.</p>
+    <p>Every checklist item links to the turns in the transcript where it happened, so students and faculty can see the evidence.</p>
+    <p class="tip">For assigned encounters, faculty can hold feedback until they've reviewed it.</p>
+  </div>
+  <figure><a href="images/feedback.jpg"><img src="images/feedback.jpg" alt="The feedback page: 56 out of 100 with history and exam 45, communication 67, reasoning 67; critical items missed; what to work on; a checklist with links to transcript turns; and the numbered transcript." loading="lazy"></a></figure>
+</div>
+
+<h2>What faculty do</h2>
+
+<div class="step">
+  <div>
+    <h3><span class="num">7</span>Write and tune cases</h3>
+    <p>Each case defines the patient (history, personality, what they'll reveal and when), the findings, and the checklist. Write one from a paragraph with AI drafting, or edit the case file directly.</p>
+    <p>The case editor also sets the patient's voice and face, with a preview.</p>
+  </div>
+  <figure class="narrow"><a href="images/avatar-panel.jpg"><img src="images/avatar-panel.jpg" alt="The case editor's Avatar panel: Woman, 40s (video, synthetic; draft) chosen, a fallback avatar setting, and a live preview of Linda's face." loading="lazy"></a></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">8</span>Review encounters</h3>
+    <p>Results lists every encounter. A review shows the student's wrap-up, the scores and the full transcript. Faculty can override any score (every change is logged) and release the feedback to the student.</p>
+  </div>
+  <figure><a href="images/review.jpg"><img src="images/review.jpg" alt="A faculty review of a student encounter: the student's wrap-up, the 56 out of 100 score breakdown, critical items missed, and the transcript." loading="lazy"></a></figure>
+</div>
+
+<h2>Try it in ten minutes</h2>
+<div class="demo">
+  <ol>
+    <li>Sign in, open the practice clinic, and see <strong>Linda Hale</strong> (stomach pain) or <strong>Daniel Reyes</strong> (chest discomfort).</li>
+    <li>Introduce yourself and take a history out loud. Ask about the pain, then about medicines, alcohol and stress. Notice what she volunteers and what she only tells you when asked well.</li>
+    <li>Try interrupting her, or firing off quick questions, and see how she responds.</li>
+    <li>Examine the abdomen and order a test or two from <em>Exam &amp; orders</em>.</li>
+    <li>End the encounter, give your summary and differential, and read the feedback. Click a checklist item's turns to see the evidence.</li>
+  </ol>
+  <p>The <strong>Feedback</strong> and <strong>Wishlist</strong> buttons at the top of every page go straight to the team. We'd love to hear what you'd change.</p>
+</div>
+
+<div class="cols">
+  <div>
+    <h2>Good to know</h2>
+    <ul>
+      <li>Transcripts are kept; recordings of students' voices are not.</li>
+      <li>The video faces run on BYU's own GPUs, so the patient's voice stays on our servers.</li>
+      <li>The patient and the feedback come from a large language model (OpenAI, under BYU's license). Scores cite the transcript, and faculty can override any of them.</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Known limits</h2>
+    <ul>
+      <li>Two practice cases so far, both drafts.</li>
+      <li>The video faces don't show moods yet, and up close their mouths are a little softer than the rest of the face.</li>
+      <li>No hospital gowns, children, or child voices yet.</li>
+      <li>The exam-room timer is a guide; it doesn't end the encounter.</li>
+      <li>Coming next: instructors watching and steering a live encounter, test mode, and an oral presentation to an attending.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  Virtual Patient is a BYU Computer Science project with the BYU School of Medicine. Screenshots are from the staging site, with demo accounts and synthetic patients.
+</footer>
+</main>
+</body>
+</html>
