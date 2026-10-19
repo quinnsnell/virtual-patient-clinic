@@ -25,7 +25,7 @@
   .intro { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 2rem; align-items: center; }
   .intro p { margin: 0 0 .8rem; }
   .intro figure { margin: 0; }
-  .intro img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px;
+  .intro video { display: block; width: 100%; height: auto; background: #10161c; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px;
                box-shadow: 0 1px 3px rgba(0, 0, 0, .06); }
   .intro figcaption { color: var(--muted); font-size: .88rem; margin-top: .4rem; }
   .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
@@ -63,8 +63,13 @@
     <p>After the encounter, students give a summary, differential and plan, and the app scores the history, communication and reasoning, with every point linked to the moment in the transcript where it happened. Faculty write the cases, assign them, and review, adjust and release the scores.</p>
   </div>
   <figure>
-    <img src="images/talking.jpg" alt="The exam room: the patient Linda Hale on video, mid-answer, with the live transcript beside her." loading="lazy">
-    <figcaption>The exam room, mid-interview. Patients and faces are synthetic.</figcaption>
+    <video controls preload="none" playsinline poster="images/demo-poster.jpg"
+           aria-label="A four-minute visit with Linda Hale: the student interviews her by voice, examines her, orders labs, gives a diagnosis, and gets scored feedback.">
+      <source src="video/demo.mp4" type="video/mp4">
+      <track kind="captions" src="video/demo.en.vtt" srclang="en" label="English">
+      <a href="video/demo.mp4">Watch the visit with Linda Hale (MP4, 4 minutes).</a>
+    </video>
+    <figcaption>A visit with Linda Hale, from the first question to the feedback (4 minutes). Patients and faces are synthetic.</figcaption>
   </figure>
 </div>
 

@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.080
+This is the Virtual Patient Clinic, a simulator for medical students.
+
+00:00:05.080 --> 00:00:12.080
+They can interview AI patients by voice, do examinations, order tests and make diagnoses,
+
+00:00:12.240 --> 00:00:16.160
+then get feedback tied to what was actually said and done.
+
+00:00:16.160 --> 00:00:23.160
+Here's a short visit with Linda Hale.
+
+00:00:23.200 --> 00:00:25.840
+Hi Ms. Hale, I'm one of the medical students.
+
+00:00:25.840 --> 00:00:30.080
+What brings you in today?
+
+00:00:30.080 --> 00:00:34.320
+I've had this burning pain right here in my upper stomach for a few weeks, and honestly
+
+00:00:34.320 --> 00:00:36.200
+I'm exhausted all the time.
+
+00:00:36.200 --> 00:00:39.960
+It's been really wearing me down, especially with work.
+
+00:00:39.960 --> 00:00:45.760
+I'm sorry that sounds miserable, when did it start?
+
+00:00:45.760 --> 00:00:46.760
+Thank you.
+
+00:00:46.760 --> 00:00:52.480
+It started about a month ago, and it's definitely gotten worse over the last couple of weeks.
+
+00:00:52.480 --> 00:00:57.560
+Are you taking anything for it, any over-the-counter pain relievers?
+
+00:00:57.560 --> 00:01:03.680
+Yeah, I've been taking Tums, and they help for maybe an hour, then it kind of comes right
+
+00:01:03.680 --> 00:01:09.400
+back, and I take ibuprofen pretty much every day for my back usually two or three at a time.
+
+00:01:09.400 --> 00:01:13.040
+Have you noticed any change in your bowel movements?
+
+00:01:13.040 --> 00:01:15.800
+Are your stools darker or black?
+
+00:01:15.800 --> 00:01:21.800
+Yeah, actually, now that you mention it, they've been darker than usual the last few
+
+00:01:21.800 --> 00:01:23.880
+days, almost black.
+
+00:01:23.880 --> 00:01:29.000
+That's part of why I finally decided I shouldn't ignore this.
+
+00:01:29.000 --> 00:01:30.000
+Thank you.
+
+00:01:30.000 --> 00:01:31.000
+That's really important.
+
+00:01:31.000 --> 00:01:38.000
+You mentioned you're exhausted. How have things been for you lately, outside of this?
+
+00:01:38.200 --> 00:01:39.680
+It's been a lot.
+
+00:01:39.680 --> 00:01:44.120
+Honestly, I got divorced about eight months ago, and I'm juggling work real estate hours
+
+00:01:44.120 --> 00:01:48.160
+are all over the place, and my two teenagers are with me about half the week.
+
+00:01:48.160 --> 00:01:52.880
+I'm just running on fumes, and my sleep is terrible.
+
+00:01:52.880 --> 00:01:54.280
+That's a lot to carry.
+
+00:01:54.280 --> 00:01:58.320
+Many people under that kind of stress find they're drinking more than usual.
+
+00:01:58.320 --> 00:02:01.480
+Have you been drinking alcohol these days?
+
+00:02:01.480 --> 00:02:06.880
+Yeah, I mean, I'll have a glass of wine with dinner sometimes.
+
+00:02:06.880 --> 00:02:07.880
+Pretty normal.
+
+00:02:07.880 --> 00:02:11.120
+I'm more worried about what's going on with my stomach though.
+
+00:02:11.840 --> 00:02:13.640
+All right, no judgment at all.
+
+00:02:13.640 --> 00:02:17.160
+On a typical night, honestly, how much is it?
+
+00:02:17.160 --> 00:02:24.160
+Okay, since the divorce, it's been more like a bottle of wine, most nights, sometimes more
+
+00:02:24.560 --> 00:02:26.080
+if it's been a really rough day.
+
+00:02:26.080 --> 00:02:27.080
+I know it's too much.
+
+00:02:27.080 --> 00:02:28.920
+I'm not proud of it.
+
+00:02:28.920 --> 00:02:34.160
+I really appreciate you telling me, let's do a physical exam and look at your stomach
+
+00:02:34.160 --> 00:02:36.160
+and abdomen.
+
+00:02:36.160 --> 00:02:39.960
+Okay, I'm fine with that.
+
+00:02:39.960 --> 00:02:43.680
+Whatever you need to do, I just really want to figure out why this burning is happening
+
+00:02:43.680 --> 00:02:46.600
+and get some relief.
+
+00:02:46.600 --> 00:02:53.600
+Then the student can order an abdominal physical exam, say a CBC and maybe liver function tests.
+
+00:02:54.120 --> 00:03:01.120
+When they return to the transcript, they'll see the results of those tests.
+
+00:03:04.200 --> 00:03:11.200
+And then they can wrap things up in the encounter.
+
+00:03:11.360 --> 00:03:18.360
+And then go ahead and enter their diagnosis.
+
+00:03:20.830 --> 00:03:27.230
+After they've entered that, they click and the language model goes through and examines
+
+00:03:27.230 --> 00:03:34.230
+the transcript, examines the diagnosis and looks at it and grades it based on a basic
+
+00:03:34.810 --> 00:03:41.810
+rubric that the doctor or professor has entered and gives them some feedback.
+
+00:03:43.470 --> 00:03:49.750
+You can see that this sees little things about what to work on and what they did and what
+
+00:03:49.750 --> 00:03:53.750
+they didn't do and how they did on communicating and things like that.
+
+00:03:53.750 --> 00:03:58.190
+And then they have their full transcript available.
+
+00:03:58.190 --> 00:04:01.510
+That's the virtual patient clinic.
