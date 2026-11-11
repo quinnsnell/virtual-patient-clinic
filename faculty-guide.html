@@ -66,7 +66,7 @@
   <div class="wrap">
     <h1>Virtual Patient Clinic: faculty guide</h1>
     <p>An interactive patient simulator for medical students. Students interview a realistic AI patient, by voice, then they can order examinations and tests, and present their thinking and receive feedback based on what they said and did. Faculty write the cases, assign them, and review and adjust the scores.</p>
-    <p>Pilot version 0.1.1, October 2026.</p>
+    <p>Pilot version 0.3, November 2026.</p>
   </div>
 </header>
 <main>
@@ -156,7 +156,8 @@
     <h3><span class="num">8</span>Write and tune cases</h3>
     <p>Each case defines the patient (history, personality, what they'll reveal and when), the findings, and how it's graded. Choose <strong>New patient</strong> and fill in six steps, in any order, or start from a paragraph with <strong>New case with AI</strong>.</p>
     <p>Your work saves itself as you type, so you can stop and carry on from any computer. Each step shows what's left, and a box says what students would find if you saved now.</p>
-    <p>A patient you save stays a draft until faculty approve it. Step 2 also sets the patient's voice and face, with a preview.</p>
+    <p>A patient you save stays a draft until a faculty member signs off on it (step 9). Step 2 also sets the patient's voice and face, with a preview.</p>
+    <p>Some settings are ready for features still being built: allergies and prescribing, other people in the room (such as a parent), results that come back at a later visit, and extra test packs. You can fill them in now; the editor marks them <em>Not used by students yet</em>, and they start working when each feature arrives.</p>
   </div>
   <figure><a href="images/case-editor.jpg"><img src="images/case-editor.jpg" alt="The case editor on the Grading step: six numbered steps down the side with ticks on the finished ones and 3/5 on Grading, a box saying what would happen if you saved now, the section percentages, and a Checks panel explaining what's still empty." loading="lazy"></a></figure>
 </div>
@@ -170,7 +171,17 @@
 
 <div class="step">
   <div>
-    <h3><span class="num">9</span>Review encounters</h3>
+    <h3><span class="num">9</span>Sign off and comment</h3>
+    <p class="tip">New, coming to the clinic with its next update.</p>
+    <p>Students see a case only after a faculty member signs off on it. In the case's <strong>Review</strong> panel, tick that you've checked this version for clinical accuracy, add a note if you like, and choose <strong>Sign off and approve</strong>. You can sign off on a case you wrote. The case list and the editor's last step, now called Sign-off, then show who signed off and when. Saving a new version needs a new sign-off.</p>
+    <p>Colleagues can leave <strong>comments</strong> on the whole case, a step, or one field, in the panel under Review. Click a comment to jump to what it's about; reply, and resolve it when it's handled. The case list counts open comments and can show only the cases that still need a sign-off.</p>
+  </div>
+  <figure class="narrow"><a href="images/sign-off.jpg"><img src="images/sign-off.jpg" alt="The Review panel for a draft case: a tick box saying I have checked this version of the case for clinical accuracy, an optional note, and a Sign off and approve version 1 button; below it, the Comments panel with a box to add a comment about Step 1." loading="lazy"></a><figcaption class="tip">Admins also see <em>Approve without a sign-off</em>, for demos.</figcaption></figure>
+</div>
+
+<div class="step">
+  <div>
+    <h3><span class="num">10</span>Review encounters</h3>
     <p>Results lists every encounter. A review shows the student's wrap-up, the scores and the full transcript. Faculty can override any score (every change is logged) and release the feedback to the student.</p>
   </div>
   <figure><a href="images/review.jpg"><img src="images/review.jpg" alt="A faculty review of an encounter: the student\'s wrap-up, the 48 out of 100 score breakdown, critical items missed, and the transcript." loading="lazy"></a></figure>
