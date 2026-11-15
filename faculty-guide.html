@@ -66,7 +66,7 @@
   <div class="wrap">
     <h1>Virtual Patient Clinic: faculty guide</h1>
     <p>An interactive patient simulator for medical students. Students interview a realistic AI patient, by voice, then they can order examinations and tests, and present their thinking and receive feedback based on what they said and did. Faculty write the cases, assign them, and review and adjust the scores.</p>
-    <p>Pilot version 0.3, November 2026.</p>
+    <p>Pilot version 0.5.6, November 2026.</p>
   </div>
 </header>
 <main>
@@ -106,11 +106,11 @@
 <div class="step">
   <div>
     <h3><span class="num">3</span>Interview the patient</h3>
-    <p>Students speak (hold the space bar, or hands-free with a headset) or type. The patient answers in her own voice about two seconds later, and her face moves with her words and shows how she feels: worried, tearful, irritated, relieved.</p>
+    <p>Students speak (hold the space bar, or hands-free with a headset) or type. The patient answers in her own voice about two seconds later, and her words appear in the transcript beside her. Her face moves with her words and shows how she feels: worried, tearful, irritated, relieved. Feelings come and go gradually, as on a real face: she gets upset quickly and calms down more slowly.</p>
     <p>She shares what the case allows, when it's asked well. Some details come only if the student builds rapport. She also reacts to how the student talks: rushed questions and interruptions make her shorter and more guarded.</p>
     <p class="tip">Faculty choose each case's patient: a photoreal video face, an animated 3D one, or a portrait.</p>
   </div>
-  <figure><a href="images/talking.jpg"><img src="images/talking.jpg" alt="The exam room: Linda Hale's video face mid-sentence, labelled Linda is speaking, her answer in large type below it, a Hold to talk button, and the live transcript of the interview on the right." loading="lazy"></a></figure>
+  <figure><a href="images/talking.jpg"><img src="images/talking.jpg" alt="The exam room: Linda Hale's video face mid-sentence, labelled Linda is speaking, and the live transcript of the interview on the right." loading="lazy"></a></figure>
 </div>
 
 <div class="step">
@@ -154,7 +154,9 @@
 <div class="step">
   <div>
     <h3><span class="num">8</span>Write and tune cases</h3>
-    <p>Each case defines the patient (history, personality, what they'll reveal and when), the findings, and how it's graded. Choose <strong>New patient</strong> and fill in six steps, in any order, or start from a paragraph with <strong>New case with AI</strong>.</p>
+    <p class="tip">New: an AI assistant at the top of the editor.</p>
+    <p>Each case defines the patient (history, personality, what they'll reveal and when), the findings, and how it's graded. Choose <strong>New patient</strong>. At the top of the editor, tell the AI assistant about the patient in a paragraph, typed or dictated, the way you'd dictate a note. It asks a few questions at a time, like a colleague taking a history, and says when it has enough. Choose <strong>Build the patient</strong> and it fills in the six steps below for you to check, with an Undo. Change it later the same way (<strong>Update the patient</strong>), or edit any of the six steps yourself, in any order.</p>
+    <p>If you dictate, the assistant reads its replies aloud, and everything said is in the chat as text. Your recording isn't kept; only the words are.</p>
     <p>Your work saves itself as you type, so you can stop and carry on from any computer. Each step shows what's left, and a box says what students would find if you saved now.</p>
     <p>A patient you save stays a draft until a faculty member signs off on it (step 9). Step 2 also sets the patient's voice and face, with a preview.</p>
     <p>Some settings are ready for features still being built: allergies and prescribing, other people in the room (such as a parent), results that come back at a later visit, and extra test packs. You can fill them in now; the editor marks them <em>Not used by students yet</em>, and they start working when each feature arrives.</p>
@@ -172,7 +174,6 @@
 <div class="step">
   <div>
     <h3><span class="num">9</span>Sign off and comment</h3>
-    <p class="tip">New.</p>
     <p>Students see a case only after a faculty member signs off on it. In the case's <strong>Review</strong> panel, tick that you've checked this version for clinical accuracy, add a note if you like, and choose <strong>Sign off and approve</strong>. You can sign off on a case you wrote. The case list and the editor's last step, now called Sign-off, then show who signed off and when. Saving a new version needs a new sign-off.</p>
     <p>Colleagues can leave <strong>comments</strong> on the whole case, a step, or one field, in the panel under Review. Click a comment to jump to what it's about; reply, and resolve it when it's handled. The case list counts open comments and can show only the cases that still need a sign-off.</p>
   </div>
@@ -205,8 +206,8 @@
     <ul>
       <li>Transcripts are kept; recordings of students' voices are not.</li>
       <li>The video faces run on BYU's own GPUs, so the patient's voice stays on our servers.</li>
-      <li>The patient's face shows her mood as the conversation goes (new). If that's distracting, an administrator can turn it off for the whole site, and every face stays neutral.</li>
-      <li>The patient and the feedback come from a large language model (OpenAI, under BYU's license). Scores cite the transcript, and faculty can override any of them.</li>
+      <li>The patient's face shows her mood as the conversation goes. If that's distracting, an administrator can turn it off for the whole site, and every face stays neutral.</li>
+      <li>The patient, the feedback and the case assistant come from large language models (OpenAI, under BYU's license). The history checklist counts what the patient actually told the student; the other scores cite the transcript, and faculty can override any of them.</li>
     </ul>
   </div>
   <div>
@@ -216,7 +217,7 @@
       <li>Up close, the video faces' mouths are a little softer than the rest of the face.</li>
       <li>No hospital gowns, children, or child voices yet.</li>
       <li>The exam-room timer is a guide; it doesn't end the encounter.</li>
-      <li>Coming next: instructors watching and steering a live encounter, test mode, and an oral presentation to an attending.</li>
+      <li>Coming next: prescriptions, results that come back at a later visit, instructors watching and steering a live encounter, test mode, and an oral presentation to an attending.</li>
     </ul>
   </div>
 </div>
